@@ -1,17 +1,22 @@
-accessibility. You can choose to enable a more compact line height from the view settings menu.
-‎service-worker.js‎
-Lines changed: 13 additions & 0 deletions
-Original file line number
-Diff line number
-Diff line change
-@@ -0,0 +1,13 @@
-const CACHE_NAME = "my-wallet-pro-v1";
-self.addEventListener("install", (event) => {
-self.skipWaiting();
-});
-self.addEventListener("activate", (event) => {
-event.waitUntil(clients.claim());
-});
-self.addEventListener("fetch", (event) => {
-event.respondWith(fetch(event.request));
-});
+{
+  "name": "My Wallet Pro",
+  "short_name": "My Wallet",
+  "description": "ระบบจัดการรายรับรายจ่าย",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
